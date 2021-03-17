@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
    var TicketUser = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
   
 		
-if (message.channel.parentID !== categoryID) return message.reply("Oeps, dit is niet in een ticket") && message.delete();
+if (message.channel.parentID !== categoryID) return message.reply("Oeps, Dit is Niet in een Sollicitatie") && message.delete();
 			
 if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Jij kan dit niet doen") && message.delete();
 

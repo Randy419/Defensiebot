@@ -189,7 +189,7 @@ settedParent.send(`<@${persoon2}>, <@&${staff}>`).then (msg => msg.delete({ time
 
 
 module.exports.help = {
-    name: "",
-    description: "Geeft al de verschillende commands",
+    name: "solliciteer",
+    description: "Solliciteer met dit commando",
     category: "Informatie"
 }
