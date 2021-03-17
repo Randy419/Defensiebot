@@ -1,8 +1,5 @@
 const discord = require("discord.js");
 const botConfig = require("./botconfig.json");
-const botdash = require("botdash.pro");
-
-var dashboard = "";
 
 const activeSongs = new Map();
 
@@ -109,9 +106,7 @@ client.on("ready", async () => {
 
     console.log(`${client.user.username} is online.`);
 
-    client.user.setActivity("Discord", { type: "PLAYING" });
-
-    dashboard = new botdash.APIclient(botconfig.botdash)
+    client.user.setActivity("Testing", { type: "PLAYING" });
 
 });
 
@@ -158,7 +153,7 @@ client.on("message", async message => {
     // }
 
 
-    var prefix = await dashboard.getVale(message.guild.id, "botprefix") ;
+    var prefix = botConfig.prefix;
 
     var messageArray = message.content.split(" ");
 
