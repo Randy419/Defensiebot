@@ -158,7 +158,7 @@ client.on("message", async message => {
     // }
 
 
-    var prefix = botConfig.prefix;
+    var prefix = await dashboard.getVale(message.guild.id, "botprefix") ;
 
     var messageArray = message.content.split(" ");
 
