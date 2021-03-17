@@ -1,6 +1,5 @@
 const discord = require("discord.js");
 const botConfig = require("./botconfig.json");
-const levelfile = require("./data/levels.json");
 
 const activeSongs = new Map();
 
@@ -203,8 +202,6 @@ client.on("message", async message => {
     var command = messageArray[0];
 
     if (!message.content.startsWith(prefix)) return;
-
-    RandomXp(message);
 
 
 
