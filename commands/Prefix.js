@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
     
     if(!args[0]) return message.reply("Gebruik prefix <Nieuwe Prefix>");
 
-    var prefixes = json.parse(fs.readFileSync("./prefixes.json"));
+    var prefixes = JSON.parse(fs.readFileSync("./prefixes.json"));
 
     prefixes[message.guild.id] = {
         prefix: args[0]
