@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
             .setThumbnail('https://i.imgur.com/wSTFkRM.png')
             .setImage('https://i.imgur.com/wSTFkRM.png')
             .setTimestamp()
-            .setFooter('Alle commands? ?help', 'https://i.imgur.com/wSTFkRM.png');
+            .setFooter('Alle commands? !help', 'https://i.imgur.com/wSTFkRM.png');
 
         return message.channel.send(botEmbed);
 
