@@ -11,12 +11,12 @@ module.exports.run = async (client, message, args) => {
         }
 
     ]);
-message.channel.send("Een Stafflid heeft dit kanaal in lockdown gedaan")
+message.channel.send(`Het stafflid: ${message.author} Heeft dit kanaal in lockdown gedaan.`)
 
 }
 
 module.exports.help = {
     name: "lockdown",
-    description: "Geeft al de verschillende commands",
+    description: "Doet het Kanaal In lockdown",
     category: "Informatie"
 }
