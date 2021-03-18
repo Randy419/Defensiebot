@@ -1,29 +1,29 @@
 const discord = require("discord.js");
-const fetch  = require("node-fetch");
-
+const fetch = require("node-fetch");
 module.exports.run = async (client, message, args) => {
+
+fetch('https://www.reddit.com/r/memes/random/.json').then(resp => resp.json()).then(respOmgevormd => {
     
-    fetch('https://www.reddit.com/r/memes/random.json').then(resp => resp.json()).then(respomgevormd => {
-        var permalink = respomgevormd[0].data.children.data.permalink;
-        var memeurl = `https://www.reddit.com${permalink}`;
-        var memeFoto = respomgevormd[0].data.children.data.url;
-        var memeTittel  = respomgevormd[0].data.children.data.title;
+    var permalink = respOmgevormd[0].data.children[0].data.permaLink;
+    var MemeURL = `https://www.reddit.com${permalink}`;
+    var memeFoto = respOmgevormd[0].data.children[0].data.url;
+    var MemeTitle = respOmgevormd[0].data.children[0].data.title;
 
-        var embed = discord.Messageembed()
-        .setTitle(`${memeTittel}`)
-        .setUrl(`${memeurl}`)
-        .setImage(`${MemeFoto}`)
-        .setcoler('RAMDOM');
+    var embed = new discord.MessageEmbed()
+        .setTitle(`${MemeTitle}`)
+        .setURL(`${MemeURL}`)
+        .setImage(`${memeFoto}`)
+        .setColor(`RANDOM`);
 
-        message.channel.send(embed);
-    }).catch("error", (err) => {
-        console.log(err.message);
-    })
+        message.channel.send(embed)
+}).catch("error", (err) => {
+    console.log(err.messge);
+})
 
 }
 
 module.exports.help = {
     name: "meme",
-    description: "MEMS!",
-    category: "Informatie"
+    description: "dit is een Mem commando",
+    category: "Algemeen"
 }
