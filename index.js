@@ -67,37 +67,10 @@ client.on("guildMemberAdd", member => {
     });
 
 
-    var channel = member.guild.channels.cache.get('708335622443630624');
-
-    if (!channel) return;
 
     // channel.send(`Welkom bij de server ${member}`);
 
-    var joinEmbed = new discord.MessageEmbed()
-        .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setDescription(`Hoi ${member.user.username}, **Welkom op de server**`)
-        .setColor("#00FF00")
-        .setFooter("Gebruiker gejoined")
-        .setTimestamp();
 
-    channel.send(joinEmbed);
-
-});
-
-
-client.on("guildMemberRemove", member => {
-
-    var channel = member.guild.channels.cache.get('708335622443630624');
-
-    if (!channel) return;
-
-    var leaveEmbed = new discord.MessageEmbed()
-        .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-        .setColor("#FF0000")
-        .setFooter("Gebruiker geleaved")
-        .setTimestamp();
-
-    channel.send(leaveEmbed);
 
 });
 
