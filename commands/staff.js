@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
    var user = message.guild.member(message.mentions.users.first());
     if (!user) return message.reply("Geen gebruiker gevonden");
 
-    var role = message.guild.roles.cache.find(r => r.name ==="Staff team");
+    var role = message.guild.roles.cache.find(r => r.name ==="[OF-D] Proef Moderator");
     if (!role) return message.reply("Geen rol met deze naam Gevonden");
 
     var Foutembed = new discord.MessageEmbed()

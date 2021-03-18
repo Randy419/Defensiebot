@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
 
     var botEmbed = new discord.MessageEmbed()
-            .setTitle('Welkom Bij Rotterdam')
+            .setTitle('Welkom Bij Defensie')
             .setDescription("In deze Embed Vind je Informatie")
             .setColor("#0099ff")
             .addField("Bot:", client.user.username)

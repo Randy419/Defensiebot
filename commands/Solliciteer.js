@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
     
-    var categoryID = "775792261031133204";
+    var categoryID = "822156156276310046";
     
     var userName = message.author.username;
     
@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
     
     var persoon = "775792261031133204-"+message.author.username;
     
-    var staff = "777579575051681833"
+    var staff = "818863215479488532"
     
     var TicketBestaat = false;
     
