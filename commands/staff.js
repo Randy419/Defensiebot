@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) => {
 
     if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("ADMINISTRATOR");
 
-    var user = message.guild.member(message.mentions.user.first());
+   var user = message.guild.member(message.mentions.users.first());
     if (!user) return message.reply("Geen gebruiker gevonden");
 
     var role = message.guild.roles.cache.find(r => r.name ==="Staff team");
