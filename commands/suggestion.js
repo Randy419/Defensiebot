@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     if (!idee) return message.channel.send("Geen Idee meegegeven gelieve een idee mee te geven.");
  
     // Maak het embed aan.
-    var ideeEmbed = new discord.RichEmbed()
+    var ideeEmbed = new discord.MessageEmbed()
         .setTitle("Nieuw Idee")
         .setColor("#00FF00")
         .addField("Idee: ", idee)
