@@ -51,7 +51,7 @@ module.exports.run = async (client, message, args) => {
                     });
 
                     
-                    settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '@Support Team'), {
+                    settedParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === 'Support Team'), {
                         SEND_MESSAGES: true,
                         VIEW_CHANNEL: true
                     });
