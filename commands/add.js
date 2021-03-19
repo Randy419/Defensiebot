@@ -43,14 +43,15 @@ module.exports.run = async (client, message, args) => {
               CONNECT: true,
               READ_MESSAGES_HISTORY: true,
               VIEW_CHANNEL: true,
+            });
 
+            message.channel.send(embed).then(msg => msg.delete({ timeout: 10000  }));
 
+      } else if(emoji === "❌"){
 
+        msg.delete();
 
-
-
-          })
-
+        message.reply("Toegevoeging geanuleerd").then(msg => msg.delete({ timeout: 50000 }))
       }
 
     })
